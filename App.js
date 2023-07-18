@@ -57,10 +57,81 @@ import ReactDOM from "react-dom/client";
 
 // const heading3 = <h1 key="h3">React</h1>;
 
-const HeaderComponent = () => {
-  return <div>React dev</div>;
+const choleBhature = {
+  name: "Chole bhature",
+  img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/hdo9as1kpcnrr8bc61dw",
+  cusines: ["North india", "masala"],
+  rating: 4.2,
+};
+
+const RestaurantsCard = () => (
+  <div className="card">
+    <img src={choleBhature.img} alt="" />
+    <h2>{choleBhature.name}</h2>
+    <h3>{choleBhature.cusines.join(",")}</h3>
+    <h4>{choleBhature.rating} star</h4>
+  </div>
+);
+
+const Title = () => (
+  <div>
+    <a href="/">
+      <img
+        src="https://cdn-images-1.medium.com/v2/resize:fit:1200/1*v5SYqjYEdQMPIwNduRrnCw.png"
+        alt="logo"
+        className="logo"
+      />
+    </a>
+  </div>
+);
+
+const Header = () => {
+  return (
+    <div className="header">
+      <Title />
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+const Body = () => {
+  return (
+    <div className="restaurant-list">
+      <RestaurantsCard />
+      <RestaurantsCard />
+      <RestaurantsCard />
+      <RestaurantsCard />
+      <RestaurantsCard />
+      <RestaurantsCard />
+      <RestaurantsCard />
+      <RestaurantsCard />
+      <RestaurantsCard />
+      <RestaurantsCard />
+    </div>
+  );
+};
+
+const Footer = () => {
+  return <div>Footer</div>;
+};
+
+const AppLayout = () => {
+  return (
+    <>
+      <Header />
+      <Body />
+      <Footer />
+    </>
+  );
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<HeaderComponent />);
+root.render(<AppLayout />);
