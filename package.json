@@ -1,0 +1,11 @@
+{
+  "name": "dpk",
+  "version": "1.0.0",
+  "description": "dpk",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Deepak Gupta",
+  "license": "ISC"
+}
