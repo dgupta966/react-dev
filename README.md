@@ -2,23 +2,23 @@
 
 # parcel
 
-creating a server
-HMR - hot module replacement -> doing this parcel or bundler
-File watcher algorithm - written in C++
-Bundling
-minify
-cleaning our code
-dev and production build
-super fast build algorithm
-image optimization
-caching while development
-compression - e.g., rename variables, etc
-compatible of older version of browser
-it also add polyfill
-HTTPS on dev --> npx parcel index.html --https(may be complaint because of localhost and chrome doesn't trust localhost)
-manages port numbers
-consistent hashing --> that parcel uses for caching
-tree shaking -> removing unwanted code
+1. creating a server
+2. HMR - hot module replacement -> doing this parcel or bundler
+3. File watcher algorithm - written in C++
+4. Bundling
+5. minify
+6. cleaning our code
+7. dev and production build
+8. super fast build algorithm
+9. image optimization
+10. caching while development
+11. compression - e.g., rename variables, etc
+12. compatible of older version of browser
+13. it also add polyfill
+14. HTTPS on dev --> npx parcel index.html --https(may be complaint because of localhost and chrome doesn't trust localhost)
+15. manages port numbers
+16. consistent hashing --> that parcel uses for caching
+17. tree shaking -> removing unwanted code
 
 # JSX ??
 
@@ -58,8 +58,6 @@ React.createElement => object => html(DOM)
 
 console.log(container);
 
-const heading3 = <h1 key="h3">React</h1>;
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(heading3);
+root.render(container);
