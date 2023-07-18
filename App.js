@@ -19,36 +19,48 @@ import ReactDOM from "react-dom/client";
 // consistent hashing --> that parcel uses for caching
 // tree shaking -> removing unwanted code
 
-const heading = React.createElement(
-  "h1",
-  {
-    id: "title",
-    key: "h1",
-  },
-  "Heading 1"
-);
+// const heading = React.createElement(
+//   "h1",
+//   {
+//     id: "title",
+//     key: "h1",
+//   },
+//   "Heading 1"
+// );
 
-const heading2 = React.createElement(
-  "h1",
-  {
-    id: "title",
-    key: "h2",
-  },
-  "Heading 2"
-);
+// const heading2 = React.createElement(
+//   "h1",
+//   {
+//     id: "title",
+//     key: "h2",
+//   },
+//   "Heading 2"
+// );
 
-const container = React.createElement(
-  "div",
-  {
-    id: "container",
-  },
-  [heading, heading2]
-);
+// const container = React.createElement(
+//   "div",
+//   {
+//     id: "container",
+//   },
+//   [heading, heading2]
+// );
 
 // React.createElement => object => html(DOM)
 
-console.log(container);
+// console.log(container);
+
+// JSX ??
+
+// JSX => React.createElement => object => html(DOM)
+
+// babel convert JSX => React.createElement
+
+// const heading3 = <h1 key="h3">React</h1>;
+
+const HeaderComponent = () => {
+  return <div>React dev</div>;
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(container);
+root.render(<HeaderComponent />);
