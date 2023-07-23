@@ -20,7 +20,7 @@ const RestaurantsCard = ({ name, cuisines, avgRating, cloudinaryImageId }) => {
       >
         {cuisines.join(",")}
       </h4>
-      <h4 className="p-2">{avgRating} star</h4>
+      <h4 className="p-2">⭐ {avgRating}</h4>
     </div>
   );
 };
