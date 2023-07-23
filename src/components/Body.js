@@ -47,10 +47,10 @@ const Body = () => {
     <Shimmer />
   ) : (
     <>
-      <div className="search-container m-2 p-2 bg-pink-50">
+      <div className="search-container m-2 p-2 shadow-sm">
         <input
           type="text"
-          className="p-2 m-2 focus:bg-green-100"
+          className="p-2 m-2 focus:bg-green-50 border border-black rounded"
           placeholder="search"
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
@@ -76,7 +76,7 @@ const Body = () => {
           onChange={(e) => setUser({ ...user, email: e.target.value })}
         /> */}
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-center">
         {filteredRestaurants.length !== 0 ? (
           filteredRestaurants?.map((item) => (
             <Link to={"restaurant/" + item.data.id} key={item.data.id}>

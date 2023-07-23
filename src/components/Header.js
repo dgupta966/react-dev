@@ -20,7 +20,7 @@ const Header = () => {
   const isOnline = useOnline();
   const { user } = useContext(UserContext);
   return (
-    <div className="flex justify-between bg-pink-50 shadow-lg">
+    <div className="flex justify-between shadow-lg">
       <Title />
       <div className="nav-items">
         <ul className="flex py-10 ">
