@@ -53,7 +53,8 @@ const RestaurantMenu = () => {
                 <h1 className="font-bold text-xl">{i.name}</h1>
                 <h2
                   name={i?.description}
-                  className="text-gray-500 truncate text-sm"
+                  className="text-gray-500 text-sm truncate w-56"
+                  title={i?.description}
                 >
                   {i?.description}
                 </h2>

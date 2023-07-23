@@ -11,8 +11,13 @@ const RestaurantsCard = ({ name, cuisines, avgRating, cloudinaryImageId }) => {
         }
         alt=""
       />
-      <h2 className="font-bold text-xl truncate p-2">{name}</h2>
-      <h4 className="truncate text-sm text-gray-500 p-2 ">
+      <h2 className="font-bold text-xl truncate p-2" title={name}>
+        {name}
+      </h2>
+      <h4
+        className="truncate text-sm text-gray-500 p-2 "
+        title={cuisines.join(",")}
+      >
         {cuisines.join(",")}
       </h4>
       <h4 className="p-2">{avgRating} star</h4>
