@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import { IMG_CDN_URL } from "./constants";
 import useRestaurant from "../utils/useRestaurant";
+import { addItem } from "../redux/cartSlice";
+import { useDispatch } from "react-redux";
 
 const RestaurantMenu = () => {
   const { id } = useParams();
@@ -9,6 +11,14 @@ const RestaurantMenu = () => {
   console.log(restaurant);
 
   console.log(id);
+
+  const dispatch = useDispatch();
+
+  const addFoodItem = (item) => {
+    dispatch(addItem(item));
+    console.log("item", item);
+  };
+
   return !restaurant ? (
     <h2>Loading ...</h2>
   ) : (
@@ -62,6 +72,12 @@ const RestaurantMenu = () => {
                   Price -{" "}
                   {Boolean(i?.price) ? i?.price / 100 + " Rupees" : "❌"}
                 </h2>
+                <button
+                  className="text-sm bg-green-200 p-1"
+                  onClick={() => addFoodItem(i)}
+                >
+                  Add Item
+                </button>
               </span>
               <img
                 className="w-24 h-24"
